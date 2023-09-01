@@ -1,0 +1,6 @@
+usr/local/bin/varsechain-qt usr/bin
+share/pixmaps/varsechain32.xpm usr/share/pixmaps
+share/pixmaps/varsechain16.xpm usr/share/pixmaps
+share/pixmaps/varsechain128.png usr/share/pixmaps
+debian/varsechain-qt.desktop usr/share/applications
+debian/varsechain-qt.protocol usr/share/kde4/services/

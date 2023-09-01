@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/varsechain_ar.qm</file>
+        <file alias="bg">locale/varsechain_bg.qm</file>
+        <file alias="de">locale/varsechain_de.qm</file>
+        <file alias="en">locale/varsechain_en.qm</file>
+        <file alias="es">locale/varsechain_es.qm</file>
+        <file alias="fi">locale/varsechain_fi.qm</file>
+        <file alias="fr">locale/varsechain_fr.qm</file>
+        <file alias="it">locale/varsechain_it.qm</file>
+        <file alias="ja">locale/varsechain_ja.qm</file>
+        <file alias="ko">locale/varsechain_ko.qm</file>
+        <file alias="nl">locale/varsechain_nl.qm</file>
+        <file alias="pl">locale/varsechain_pl.qm</file>
+        <file alias="pt">locale/varsechain_pt.qm</file>
+        <file alias="ro">locale/varsechain_ro.qm</file>
+        <file alias="ru">locale/varsechain_ru.qm</file>
+        <file alias="sk">locale/varsechain_sk.qm</file>
+        <file alias="th">locale/varsechain_th.qm</file>
+        <file alias="tr">locale/varsechain_tr.qm</file>
+        <file alias="vi">locale/varsechain_vi.qm</file>
+        <file alias="zh_CN">locale/varsechain_zh_CN.qm</file>
+        <file alias="zh_TW">locale/varsechain_zh_TW.qm</file>
+    </qresource>
+</RCC>

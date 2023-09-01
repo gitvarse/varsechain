@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Varsechain Core
+Comment=Varsechain P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Varsechain peer-to-peer Netzwerk
+Comment[fr]=Varsechain, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Varsechain, eşten eşe kriptografik sanal para birimi
+Exec=varsechain-qt %u
+Terminal=false
+Type=Application
+Icon=varsechain128
+MimeType=x-scheme-handler/varsechain;
+Categories=Office;Finance;

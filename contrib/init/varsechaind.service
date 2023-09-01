@@ -1,0 +1,22 @@
+[Unit]
+Description=Varsechain's distributed currency daemon
+After=network.target
+
+[Service]
+User=varsechaincore
+Group=varsechaincore
+
+Type=forking
+PIDFile=/var/lib/varsechaind/varsechaind.pid
+ExecStart=/usr/bin/varsechaind -daemon -pid=/var/lib/varsechaind/varsechaind.pid \
+-conf=/etc/varsechaincore/varsechain.conf -datadir=/var/lib/varsechaind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

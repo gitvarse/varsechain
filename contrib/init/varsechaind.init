@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  varsechaind The Varsechain Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: varsechaind
+# processname: varsechaind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/varsechaind, see below
+if [ -f /etc/sysconfig/varsechaind ]; then
+        . /etc/sysconfig/varsechaind
+fi
+
+RETVAL=0
+
+prog=varsechaind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/varsechaind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/varsechaind}
+
+# varsechaind defaults to /usr/bin/varsechaind, override with BITCOIND_BIN
+varsechaind=${BITCOIND_BIN-/usr/bin/varsechaind}
+
+# varsechaind opts default to -disablewallet, override with BITCOIND_OPTS
+varsechaind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $varsechaind $varsechaind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
